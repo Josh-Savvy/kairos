@@ -1,0 +1,26 @@
+[workspace]
+members = ["crates/*"]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+
+[package]
+name = "kairos-server"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+axum = { version = "0.8", features = ["ws"] }
+dotenvy = "0.15"
+tokio = { version = "1", features = ["full"] }
+tower-http = { version = "0.6", features = ["cors", "fs", "trace"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+kairos-bible = { path = "crates/bible" }
+kairos-detection = { path = "crates/detection", features = ["vector-search", "api-embedder"] }
+kairos-stt = { path = "crates/stt" }
+kairos-api = { path = "crates/api" }

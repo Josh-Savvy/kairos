@@ -1,0 +1,19 @@
+{
+  "name": "kairos",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --filter @kairos/web dev",
+    "dev:server": "cd apps/server && cargo run",
+    "build": "pnpm --filter @kairos/web build",
+    "build:server": "cd apps/server && cargo build --release",
+    "lint": "pnpm -r lint",
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm -r test",
+    "test:e2e": "pnpm --filter @kairos/web test:e2e"
+  },
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=9"
+  },
+  "version": "0.1.0"
+}
