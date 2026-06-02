@@ -1,10 +1,4 @@
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./kairos-dark.png" />
-    <source media="(prefers-color-scheme: light)" srcset="./kairos-light.png" />
-    <img src="./kairos-light.png" alt="Kairos" height="80" />
-  </picture>
-</p>
+<h1 align="center">Kairos</h1>
 <p align="center">
   Real-time Bible verse detection for live sermons — in your browser.
   <br />
